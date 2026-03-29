@@ -8,18 +8,18 @@ public interface IAgentRepository {
 
     List<AiClientApiVO> queryAiClientApiVOListByClientIds(List<String> clientIdList);
 
-    List<AiClientModelVO> AiClientModelVOByClientIds(List<String> clientIdList);
+    List<AiClientModelVO> queryAiClientModelVOByClientIds(List<String> clientIdList);
 
-    List<AiClientToolMcpVO> AiClientToolMcpVOByClientIds(List<String> clientIdList);
+    List<AiClientToolMcpVO> queryAiClientToolMcpVOByClientIds(List<String> clientIdList);
 
-    List<AiClientSystemPromptVO> AiClientSystemPromptVOByClientIds(List<String> clientIdList);
+    List<AiClientSystemPromptVO> queryAiClientSystemPromptVOByClientIds(List<String> clientIdList);
 
-    List<AiClientAdvisorVO> AiClientAdvisorVOByClientIds(List<String> clientIdList);
+    List<AiClientAdvisorVO> queryAiClientAdvisorVOByClientIds(List<String> clientIdList);
 
-    List<AiClientVO> AiClientVOByClientIds(List<String> clientIdList);
+    List<AiClientVO> queryAiClientVOByClientIds(List<String> clientIdList);
 
     List<AiClientApiVO> queryAiClientApiVOListByModelIds(List<String> modelIdList);
 
-    List<AiClientModelVO> AiClientModelVOByModelIds(List<String> modelIdList);
+    List<AiClientModelVO> queryAiClientModelVOByModelIds(List<String> modelIdList);
 
 }
