@@ -1,5 +1,9 @@
 package com.wei.ai.domain.agent.service.armory.factory;
 
+import cn.bugstack.wrench.design.framework.tree.StrategyHandler;
+import com.wei.ai.domain.agent.model.entity.ArmoryCommandEntity;
+import com.wei.ai.domain.agent.service.armory.RootNode;
+import jakarta.annotation.Resource;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,6 +15,14 @@ import java.util.Map;
 
 @Service
 public class DefaultArmoryStrategyFactory {
+
+    @Resource
+    private RootNode rootNode;
+
+
+    public StrategyHandler<ArmoryCommandEntity, DefaultArmoryStrategyFactory.DynamicContext,String> armoryStrategyHandler() throws Exception {
+        return rootNode;
+    }
     /**
      * 数据上下文
      */
